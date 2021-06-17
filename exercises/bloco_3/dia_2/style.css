@@ -1,37 +1,45 @@
 
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    background-color: rgb(255, 400, 200);
+body {
+    color: #475550;
+    background-color: gray;
     font-size: 15px;
     font-family: montserrat, sans-serif;
   }
 
+h1 {
+    color: white;
+}
 
-h4 {
-    color: green;
-    font-size: 1em;
-  }
+#sobre-foto {
+    color: white;
+}
 
+.trybe_green{
+    color: #11a36a;
+}
 
-  
-  p {
-    font-family: monospace,helvetica,serif;
+.section-title{
+    line-height: 42px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.testimonial-names{
     line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}  
+
+
+  p {
+        line-height: 20px;
   }
 
   h1 {
     text-decoration: underline;
   }
 
-  #para-voce {
-    background-color:green;
-    text-align: center;
-
-  }
-
-  .fundadores{
-    background-color: white;
-    font-weight: bold;
-    font-style: italic;
-  }
+ 
