@@ -1,12 +1,19 @@
+
+
+body {
+
+    background-color: rgb(255, 400, 200);
+    font-size: 15px;
+    font-family: montserrat, sans-serif;
+  }
+
+
 h4 {
     color: green;
     font-size: 1em;
   }
 
-  body {
-    background-color: rgb(255, 400, 200);
-    font-size: 15px;
-  }
+
   
   p {
     font-family: monospace,helvetica,serif;
