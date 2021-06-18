@@ -39,20 +39,26 @@ background-position: 50% 25%;
     margin-bottom: 30px;
 }
 
-.sobre-foto {
-    color: white;
+.market{
+    padding: 70px 30px;
+    text-align: center;
+
+}
+
+.market-text {
+    max-width: 60%;
+    margin: auto;
+}
+.market-text p{
+    margin-bottom: 30px;
 }
 
 .trybe_green{
     color: #11a36a;
+    margin-bottom :60px;
 }
 
-.section-title{
-    line-height: 42px;
-    font-weight: 600;
-    font-size: 28px;
-    text-align: center;
-}
+
 
 .testimonial-names{
     line-height: 20px;
