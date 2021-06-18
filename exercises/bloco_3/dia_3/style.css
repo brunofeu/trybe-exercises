@@ -58,6 +58,25 @@ background-position: 50% 25%;
     margin-bottom :60px;
 }
 
+.testimonials {
+    padding: 30px 70px 90px 70px;
+    width: 80%;
+    margin: auto
+    
+}
+
+.student-testimonial{
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    display:inline-block ;
+    vertical-align: middle;
+    
+}
+
+.student-testimonial p{
+    margin: 10px 0;
+}
 
 
 .testimonial-names{
@@ -79,10 +98,6 @@ background-position: 50% 25%;
     font-weight: bold;
 }
 
-.center-align{
-    text-align: center;
-    
-}
 
 .ceo{
     line-height: 20px;
