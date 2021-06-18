@@ -55,7 +55,7 @@ background-position: 50% 25%;
 
 .trybe_green{
     color: #11a36a;
-    margin-bottom :60px;
+    
 }
 
 .testimonials {
@@ -107,7 +107,13 @@ background-position: 50% 25%;
     clear: both;
     text-align: center;
     padding-top: 60px;
+    
 }
+
+.footer h3{
+    margin-bottom: 60px;
+}
+
 .testimonial-names{
     line-height: 20px;
     font-size: 15px;
