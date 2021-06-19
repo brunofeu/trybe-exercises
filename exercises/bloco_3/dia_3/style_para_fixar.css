@@ -1,14 +1,16 @@
-h1{ text-align: center;}
+ol{
+    background-color: yellow;
 
-li,h1:hover{
-    background-color: blue;
-    color: white;
-    list-style:disc ;
 }
 
-li:active{
-    color: yellow;
-    list-style: none;
+.list-odd {
+    text-transform:uppercase;
 }
 
+.list-pair {
+    color: green;
+}
 
+.head h{
+    color: red;
+}
