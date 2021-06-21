@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    color: #475550;
+    font-size: 15px;
+    font-family: montserrat, sans-serif;
+  }
+
+
+
+.header{
+background-image: url('images/smiling-image.jpeg');
+background-size: cover;
+padding: 60px 30px 40px 30px;
+background-position: 50% 25%; 
+}
+
+.header-content{
+    max-width: 60%;
+    margin-left: 75px;
+}
+.header-text{
+    max-width: 80%;
+    text-align: left;
+    
+}
+
+.header-text p{
+    margin-bottom: 30px;
+   
+}
+
+.main-title {
+    margin-bottom: 30px;
+}
+
+.market{
+    padding: 70px 30px;
+    text-align: center;
+
+}
+
+.market-text {
+    max-width: 60%;
+    margin: auto;
+}
+.market-text p{
+    margin-bottom: 30px;
+}
+
+.trybe_green{
+    color: #11a36a;
+    
+}
+
+.testimonials {
+    padding: 30px 70px 90px 70px;
+    width: 80%;
+    margin: auto
+    
+}
+
+.student-testimonial{
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    display:inline-block ;
+    vertical-align: middle;
+    
+}
+
+.student-testimonial p{
+    margin: 10px 0;
+}
+
+.learning {
+    background-color: #f5f5f5;
+    padding: 30px 70px;
+    min-height: 350px;
+}
+
+.learning li{
+    margin-bottom: 25px;
+    list-style:square;
+}
+
+.learning-left {
+    float: left;
+    max-width: 40%;
+    margin-left: 15px;
+    
+
+}
+
+.learning-right {
+    float: right;
+    max-width: 50%;
+}
+
+
+.footer{
+    clear: both;
+    text-align: center;
+    padding-top: 60px;
+    
+}
+
+.footer h3{
+    margin-bottom: 60px;
+}
+
+.testimonial-names{
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}  
+
+.picture{
+    border-radius: 50px;
+}
+
+.button{
+    color: #fff;
+    background-color: #11a36a;
+    border-radius: 4px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.ceo{
+    line-height: 20px;
+    font-weight: 400;
+}
+
+
+
+ 

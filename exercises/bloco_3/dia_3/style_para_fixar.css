@@ -1,0 +1,16 @@
+ol{
+    background-color: yellow;
+
+}
+
+.list-odd {
+    text-transform:uppercase;
+}
+
+.list-pair {
+    color: green;
+}
+
+.head h{
+    color: red;
+}
