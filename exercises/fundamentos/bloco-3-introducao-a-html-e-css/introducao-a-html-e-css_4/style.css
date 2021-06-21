@@ -1,4 +1,11 @@
+body{
+    background-color: black;
+    color: white;
+}
 
+.header h1{
+    font-size: 50px;
+}
 
 .main-title{
     text-align: center;
@@ -7,22 +14,36 @@
 .header-nav li{
     display: inline;
     padding: 30px;
+    
+   
 
 }
 
-.main{
+.header-nav a{
+    color:white;
+}
+
+.img{
+    max-width: 350px;
+    padding-left:35%;
+    text-align: center;
+    
     
 }
+
+
 
 .article{
     display: inline-block;
     max-width: 50%;
     text-align: justify;
-    padding :;
+   
     margin-right: 10%;
     margin-left: 5%;
     vertical-align: top;
 }
+
+
 
 .article h2{
     text-align: center;
@@ -30,10 +51,20 @@
 
 .aside {
 
+  
     display: inline-block;
     text-align: center;
-    padding-top: 50px ;
+    padding: 10px 10px 30px 10px;
+    border:1px solid white;
+}
 
+.refs a{
+ color: white;
+}
+
+.refs h4{
+    
+    margin-left: 1.3%;
 }
 
 .footer{
