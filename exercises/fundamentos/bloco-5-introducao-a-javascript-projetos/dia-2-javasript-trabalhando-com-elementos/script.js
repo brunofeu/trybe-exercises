@@ -15,3 +15,9 @@ document.getElementsByTagName('body')[0].appendChild(mainContent);
 let centerContent = document.createElement('div');
 centerContent.className = 'center-content';
 document.querySelector('.main-content').appendChild(centerContent);
+
+//Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+
+let paragraph = document.createElement('p');
+paragraph.innerText = 'Exercício de Ficaxão DOM';
+document.querySelector('.center-content').appendChild(paragraph);
