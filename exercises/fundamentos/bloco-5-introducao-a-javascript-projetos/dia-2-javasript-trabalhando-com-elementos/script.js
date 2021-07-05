@@ -27,3 +27,9 @@ document.querySelector('.center-content').appendChild(paragraph);
 let leftContent = document.createElement('div');
 leftContent.className = ('left-content');
 document.querySelector('.main-content').appendChild(leftContent);
+
+// Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+
+let rightContent = document.createElement('div');
+rightContent.className = 'right-content';
+document.querySelector('.main-content').appendChild(rightContent);
