@@ -21,3 +21,9 @@ document.querySelector('.main-content').appendChild(centerContent);
 let paragraph = document.createElement('p');
 paragraph.innerText = 'Exercício de Ficaxão DOM';
 document.querySelector('.center-content').appendChild(paragraph);
+
+// Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+
+let leftContent = document.createElement('div');
+leftContent.className = ('left-content');
+document.querySelector('.main-content').appendChild(leftContent);
