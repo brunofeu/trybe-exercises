@@ -9,3 +9,9 @@ document.getElementsByTagName('body')[0].appendChild(titleH1);
 let mainContent = document.createElement('div');
 mainContent.className = 'main-content';
 document.getElementsByTagName('body')[0].appendChild(mainContent);
+
+//Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+
+let centerContent = document.createElement('div');
+centerContent.className = 'center-content';
+document.querySelector('.main-content').appendChild(centerContent);
