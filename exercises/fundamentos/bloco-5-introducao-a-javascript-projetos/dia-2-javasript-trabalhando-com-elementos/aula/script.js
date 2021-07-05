@@ -52,4 +52,8 @@ document.querySelector('#filhoDoPrimeiroFilhoDoFilho').parentNode.parentNode.nex
 
 //Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 
-document.querySelector('#pai').children[2, 3, 4]
+document.querySelector('#pai').removeChild(terceiroFilho)
+
+document.querySelector('#pai').removeChild(quartoEUltimoFilho)
+
+document.querySelector('#pai').removeChild(irmaoDeOndeVoceEsta)
