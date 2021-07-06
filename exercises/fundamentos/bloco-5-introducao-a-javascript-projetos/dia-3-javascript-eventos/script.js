@@ -100,3 +100,12 @@ document.getElementById('days').addEventListener('mouseout', function(event){
   event.target.style.fontSize = '20px';
 }
 );
+
+// exercicio 7
+
+function tarefa(string){
+  let span = document.createElement('span');
+  span.innerText = string;
+  document.querySelector('.my-tasks').appendChild(span)
+}
+tarefa('Cozinhar');
