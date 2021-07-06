@@ -49,9 +49,13 @@ thirdDiv.addEventListener("click", addTech);
 
 function changeText(event){
   
-  let element = document.getElementsByClassName('tech');
+  if (event.keyCode == 13){  // código da tecla enter
+  document.getElementsByClassName('tech')[0].innerText = input.value;
+  }
   
 }
+
+document.addEventListener('keyup', changeText);
 
 function redirect(event){
   window.open ("https://brunofeu.github.io/")
