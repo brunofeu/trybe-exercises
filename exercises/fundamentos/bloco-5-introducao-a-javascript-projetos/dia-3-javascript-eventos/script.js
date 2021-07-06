@@ -52,12 +52,39 @@ feriados();
 
 document.getElementById('btn-holiday').addEventListener('click', function (){
   let color = 'magenta';
-  
   let holidays = document.querySelectorAll('.holiday');
   for (let index = 0; index < holidays.length; index += 1){
     if ( holidays[index].style.backgroundColor === color){
     holidays[index].style.backgroundColor = '';
     }else  holidays[index].style.backgroundColor = color;
+  }
+}
+)
+
+// exercicio 4
+
+function sexta(){
+
+  let btnSexta = document.createElement('button');
+  btnSexta.id = 'btn-friday';
+  btnSexta.innerText = 'Sexta-Feira';
+  document.querySelector('.buttons-container').appendChild(btnSexta)
+}
+sexta ();
+
+// exercicio 5
+
+let fridayMemo = [];
+document.getElementById('btn-friday').addEventListener('click', function (){
+  let fridays = document.querySelectorAll('.friday');
+  
+  for (let index = 0; index < fridays.length; index += 1){
+    if ( fridays[index].innerText === 'Sextou!'){
+      fridays[index].innerText = fridayMemo[index];      
+    } else {      
+      fridayMemo[index] = fridays[index].innerText;
+      fridays[index].innerText = 'Sextou!';
+    }
   }
 }
 )
