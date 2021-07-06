@@ -63,3 +63,14 @@ function redirect(event){
 }
 
 myWebpage.addEventListener('dblclick', redirect)
+
+function mouse(event){
+  event.target.style.color = '#7fff00';
+}
+
+function mouseOff(event){
+  event.target.style.color = '';
+}
+
+myWebpage.addEventListener('mouseenter', mouse);
+myWebpage.addEventListener('mouseleave', mouseOff);
