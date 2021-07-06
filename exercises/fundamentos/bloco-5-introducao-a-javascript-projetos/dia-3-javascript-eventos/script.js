@@ -132,3 +132,16 @@ function selected(event){
 }
 
 document.querySelector('.task').addEventListener('click', selected);
+
+// exercicio 10
+
+function daySelected (event){
+  let cor = document.querySelector('.selected').style.backgroundColor
+  if (event.target.style.color !== cor){
+    event.target.style.color = cor;
+  } else {
+    event.target.style.color = 'rgb(119,119,119)';
+  }
+}
+
+document.getElementById('days').addEventListener('click', daySelected);
