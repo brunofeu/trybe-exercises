@@ -34,3 +34,16 @@ function numDays(){
 }
 
 numDays();
+
+// exercicio 2
+
+function feriados(){
+
+  let btnHoliday = document.createElement('button');
+  btnHoliday.id = 'btn-holiday';
+  btnHoliday.innerText = 'Feriados';
+  document.querySelector('.buttons-container').appendChild(btnHoliday)
+
+}
+
+feriados();
