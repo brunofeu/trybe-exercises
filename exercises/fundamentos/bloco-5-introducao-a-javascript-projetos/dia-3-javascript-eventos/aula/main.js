@@ -51,6 +51,7 @@ function changeText(event){
   
   if (event.keyCode == 13){  // código da tecla enter
   document.getElementsByClassName('tech')[0].innerText = input.value;
+  input.value = '';
   }
   
 }
@@ -74,3 +75,4 @@ function mouseOff(event){
 
 myWebpage.addEventListener('mouseenter', mouse);
 myWebpage.addEventListener('mouseleave', mouseOff);
+input.placeholder = 'Alterar a tecnologia selecionada'
