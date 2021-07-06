@@ -47,3 +47,17 @@ function feriados(){
 }
 
 feriados();
+
+// exercicio 3
+
+document.getElementById('btn-holiday').addEventListener('click', function (){
+  let color = 'magenta';
+  
+  let holidays = document.querySelectorAll('.holiday');
+  for (let index = 0; index < holidays.length; index += 1){
+    if ( holidays[index].style.backgroundColor === color){
+    holidays[index].style.backgroundColor = '';
+    }else  holidays[index].style.backgroundColor = color;
+  }
+}
+)
