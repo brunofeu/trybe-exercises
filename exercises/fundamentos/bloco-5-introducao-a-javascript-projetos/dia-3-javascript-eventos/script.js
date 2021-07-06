@@ -88,3 +88,15 @@ document.getElementById('btn-friday').addEventListener('click', function (){
   }
 }
 )
+
+// exercicio 6
+
+document.getElementById('days').addEventListener('mouseover', function(event){
+  event.target.style.fontSize = '40px';
+}
+);
+
+document.getElementById('days').addEventListener('mouseout', function(event){
+  event.target.style.fontSize = '20px';
+}
+);

@@ -141,7 +141,7 @@ label {
 }
 
 .week-days li {
-  color: #666;
+  color: "rgb(238,238,238)";
   display: inline-block;
   text-align: center;
   vertical-align: middle;
