@@ -52,13 +52,11 @@ function changeText(event){
   if (event.keyCode == 13){  // código da tecla enter
   document.getElementsByClassName('tech')[0].innerText = input.value;
   input.value = '';
-  }
-  
+  }  
 }
-
 document.addEventListener('keyup', changeText);
 
-function redirect(event){
+function redirect(){
   window.open ("https://brunofeu.github.io/")
   
 }
