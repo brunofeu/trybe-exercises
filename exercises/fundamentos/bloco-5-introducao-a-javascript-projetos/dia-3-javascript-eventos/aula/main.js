@@ -54,7 +54,7 @@ function changeText(event){
   input.value = '';
   }  
 }
-document.addEventListener('keyup', changeText);
+input.addEventListener('keyup', changeText);
 
 function redirect(){
   window.open ("https://brunofeu.github.io/")

@@ -145,3 +145,28 @@ function daySelected (event){
 }
 
 document.getElementById('days').addEventListener('click', daySelected);
+
+
+// bonus
+
+function compromissosClick(){
+  let text = document.createElement('p')
+  text.innerText = document.getElementById('task-input').value;
+  if(text === ''){
+    alert ('ERRO!')
+  }
+    document.querySelector('.input-container').appendChild(text);
+}
+function compromissos(event){
+  let text = document.createElement('p')
+  text.innerText = document.getElementById('task-input').value;
+  if(text === ''){
+    alert ('ERRO!')
+  }
+  if (event.keyCode == 13){
+    document.querySelector('.input-container').appendChild(text);
+  }
+}
+
+ document.getElementById('btn-add').addEventListener('click', compromissosClick);
+document.getElementById('task-input').addEventListener('keyup', compromissos);
