@@ -120,3 +120,15 @@ function legenda(cor){
 }
 
 legenda('blue');
+
+// exercicio 9
+
+function selected(event){
+  if (event.target.className !== 'task selected' ){ 
+  event.target.className = 'task selected';
+  } else {
+    event.target.className = 'task';
+  }
+}
+
+document.querySelector('.task').addEventListener('click', selected);
