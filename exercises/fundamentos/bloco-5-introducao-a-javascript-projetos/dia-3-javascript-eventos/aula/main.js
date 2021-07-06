@@ -46,3 +46,16 @@ function addTech(event) {
 firstDiv.addEventListener('click', addTech);
 secondDiv.addEventListener('click', addTech);
 thirdDiv.addEventListener("click", addTech);
+
+function changeText(event){
+  
+  let element = document.getElementsByClassName('tech');
+  
+}
+
+function redirect(event){
+  window.open ("https://brunofeu.github.io/")
+  
+}
+
+myWebpage.addEventListener('dblclick', redirect)
