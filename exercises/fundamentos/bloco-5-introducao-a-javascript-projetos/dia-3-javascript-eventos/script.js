@@ -109,3 +109,14 @@ function tarefa(string){
   document.querySelector('.my-tasks').appendChild(span)
 }
 tarefa('Cozinhar');
+
+// exercicio 8
+
+function legenda(cor){
+  let color = document.createElement('div');
+  color.className = 'task';
+  color.style.backgroundColor = cor;
+  document.querySelector('.my-tasks').appendChild(color);
+}
+
+legenda('blue');
