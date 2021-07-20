@@ -294,15 +294,21 @@ footer ul li:nth-child(4) {
     font-size: 1.5em;
     margin-bottom: 15px;
   }
-  
+
   .hero h3 {
     font-size: 1em;
     margin-bottom: 15px;
   }
 
   .hero .btn {
-   
     padding: 10px 30px;
-    
+  }
+
+  .know-the-hotel .grid li.small {
+    flex-basis: 100%;
+  }
+  
+  .know-the-hotel .grid li.large {
+    flex-basis: 100%;
   }
 }
