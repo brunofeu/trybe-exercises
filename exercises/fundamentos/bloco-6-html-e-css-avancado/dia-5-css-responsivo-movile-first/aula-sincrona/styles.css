@@ -315,4 +315,13 @@ footer ul li:nth-child(4) {
   .features .grid {
     flex-direction: column;
   }
+
+  header {
+    position: absolute;
+  }
+
+  .newsletter button {
+    background-color: #c3c63b;
+    margin: 20px;
+  }
 }
