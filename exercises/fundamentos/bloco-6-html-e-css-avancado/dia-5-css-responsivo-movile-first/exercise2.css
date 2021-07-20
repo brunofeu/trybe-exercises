@@ -1,53 +1,114 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-
-@media screen and (max-width:400px){
-
+@media only screen and (max-width: 500px) {
   .container {
-    background-color:rgb(252, 252, 212);
-    margin: 0 5%;
+    background-color: rgb(255, 255, 240);
+    padding: 5%;
   }
 
   header p {
     font-size: 35px;
     text-align: center;
   }
- 
-  header nav ul{
+
+  header nav ul {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     list-style: none;
-    padding-left:0;
+    padding-left: 0;
     margin-bottom: 50px;
   }
 
-  .aside-one{
+  .aside-one {
     font-size: 1.3em;
   }
 
-  h2{
+  h2 {
     text-align: center;
   }
 
-  .aside-one ul, .aside-two ul{
-    list-style:none;
-    padding-left:10px;
-
+  .aside-one ul,
+  .aside-two ul {
+    list-style: none;
+    padding-left: 10px;
   }
 
-  .main-content{
+  .main-content {
     margin: 0 10px;
     text-align: justify;
   }
 
+  .main-content p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container header p {
+    font-size: 2em;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .container nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  .container nav ul {
+    display: flex;
+    list-style: none;
+    width: 80%;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .aside-one, .aside-two {
+    padding: 0 10%;
+  }
+
+  .aside-one h2, .aside-two h2 {
+    font-size: 1.8em;
+  }
+
+  .aside-one ul, .aside-two ul{
+    list-style: none;
+    padding: 0;
+    line-height: 1.5em;
+  }
+
+  .main-content{
+    padding: 0 10%;
+  }
+
+  .main-content h1{
+    text-align: center;
+    padding: 10px 0 0 0;
+  }
+
   .main-content p{
+    text-align:justify;
     font-size: 1.5em;
   }
 
+  footer{
+    padding: 0 10%;
+    font-size: 0.8em;
+  }
 
+  
 }
