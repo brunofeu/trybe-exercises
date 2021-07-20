@@ -52,3 +52,19 @@ figure {
     font-size: 0.6em;
   }
 }
+
+
+@media screen and (min-width: 1300px) {
+  body{
+    background-color:green;
+    margin: 8% auto;
+    max-width: 70%;
+    
+  }
+  h1{
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+}
