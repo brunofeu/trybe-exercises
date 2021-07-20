@@ -45,7 +45,7 @@
 #content-container {
   float: left;
   width: 100%;
-  background: #FFF;
+  background: #fff;
 }
 
 #content {
@@ -82,7 +82,9 @@
 }
 
 @media only print {
-  #header, #navigation, #footer{
+  #header,
+  #navigation,
+  #footer {
     display: none;
   }
 
@@ -96,6 +98,41 @@
   }
 }
 
-@media screen and (max-width) {
-  
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+    width: 100%;
+  }
+
+  #navigation {
+    margin: 2%;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #navigation ul li {
+    display: flex;
+  }
+
+  #navigation li a {
+    border-right: none;
+  }
+
+  #content {
+    width: 96%;
+  }
+
+  #content img {
+    width: 99%;
+  }
+  #content-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
