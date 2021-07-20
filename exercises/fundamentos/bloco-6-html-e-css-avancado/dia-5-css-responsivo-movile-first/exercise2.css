@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+@media screen and (max-width:400px){
+
+  .container {
+    background-color:rgb(252, 252, 212);
+    margin: 0 5%;
+  }
+
+  header p {
+    font-size: 35px;
+    text-align: center;
+  }
+ 
+  header nav ul{
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+    padding-left:0;
+    margin-bottom: 50px;
+  }
+
+  .aside-one{
+    font-size: 1.3em;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  .aside-one ul, .aside-two ul{
+    list-style:none;
+    padding-left:10px;
+
+  }
+
+  .main-content{
+    margin: 0 10px;
+    text-align: justify;
+  }
+
+  .main-content p{
+    font-size: 1.5em;
+  }
+
+
+}
