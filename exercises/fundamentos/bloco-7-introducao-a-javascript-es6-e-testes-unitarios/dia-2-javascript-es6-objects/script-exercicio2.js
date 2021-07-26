@@ -59,10 +59,11 @@ getValueByNumber(lesson1,0);
 
 const checkPair = (obj, key, value) => {
   // const entries = Obj
-  if(Object.entries(obj).includes(key)){
+  if(Object.keys(obj).includes(key)){
     if(obj[key] === value) {
       return true;
     } else return false;
-  } else return console.log(Object.entries(obj).includes(key))
+  } else return false;
 }
 console.log(checkPair(lesson3, 'turno', 'noite'))
+
