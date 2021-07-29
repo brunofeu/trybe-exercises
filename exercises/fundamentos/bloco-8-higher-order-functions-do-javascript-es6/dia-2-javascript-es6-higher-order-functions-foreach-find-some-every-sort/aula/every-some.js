@@ -15,10 +15,10 @@ console.log(verifyGrades(grades));
 
 const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-const hasName = (arr, name) => {
+const hasName = (arr, name) => 
   //Adicione seu código aqui
-return arr.some((element) => element === name)
-}
+ arr.some((element) => element === name)
+
 
 console.log(hasName(names, 'Ana Clara'))
 
@@ -38,3 +38,4 @@ const verifyAges = (arr, minimumAge) => {
 }
 
 console.log(verifyAges(people, 16));
+

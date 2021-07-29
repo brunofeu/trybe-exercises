@@ -8,7 +8,8 @@
 // Ordenar o jogadores em ordem alfabética
 const jogadores = ['Pelé', 'Jairzinho', 'Marta', 'Formiga', 'Hulk', 'Juary', 'Fábio', 'Janderson', 'Sócrates'];
 
+console.log (jogadores.sort())
 
 // Ordenar os números em ordem crescente
 const numeros = [12, 3, 5, 7, 123, 55, 90, 0, 13];
-
+console.log(numeros.sort((a, b) => a - b))

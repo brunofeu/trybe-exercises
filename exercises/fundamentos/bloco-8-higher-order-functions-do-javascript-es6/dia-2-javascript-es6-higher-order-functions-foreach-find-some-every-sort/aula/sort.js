@@ -12,17 +12,20 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
-people.sort((A, B) => A.age - B.age);
-// Adicione se código aqui
+// people.sort((A, B) => A.age - B.age);
+// // Adicione se código aqui
 
-// console.log(people.age);
+// // console.log(people.age);
+// console.log(people);
+
+// //EX2 
+
+// people.sort((A, B) => B.age - A.age);
+// // Adicione se código aqui
+
+// // console.log(people.age);
+// console.log(people);
+
+people.sort((a, b) => a.name < b.name ? -1 : 1)
+
 console.log(people);
-
-//EX2 
-
-people.sort((A, B) => B.age - A.age);
-// Adicione se código aqui
-
-// console.log(people.age);
-console.log(people);
-
