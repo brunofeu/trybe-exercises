@@ -8,4 +8,6 @@
 
 const nomes = ['Marcelino', 'Adriana Carla', 'José Augusto', 'Roberta Miranda', 'Caio César'];
 
+console.log(...nomes)
+
 

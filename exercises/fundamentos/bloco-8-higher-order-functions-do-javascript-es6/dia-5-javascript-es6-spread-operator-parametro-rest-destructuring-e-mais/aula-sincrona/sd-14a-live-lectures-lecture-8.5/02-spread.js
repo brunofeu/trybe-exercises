@@ -6,9 +6,17 @@ const horrorBooks = ['It', 'The Shining'];
 const scifiBooks = ['I, Robot', 'Caves of Steel', 'The End of Eternity'];
 
 // LOOP
-let awesomeBooks = [];
+// let awesomeBooks = [];
+
+// horrorBooks.forEach(book => awesomeBooks.push(book))
+// scifiBooks.forEach(book => awesomeBooks.push(book))
+// console.log(awesomeBooks)
+
 
 // SPREAD OPERATOR
+let awesomeBooks = [...horrorBooks, ...scifiBooks]
+console.log(awesomeBooks)
+
 
 assert.deepStrictEqual(
   awesomeBooks,

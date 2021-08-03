@@ -11,4 +11,4 @@ const dataInfo = ['1981', '7', '31', '22', '47', '12'];
 
 let expectedValue = '31/7/1981 - 22:47:12';
 
-assert.strictEqual(formatDate('1981', '7', '31', '22', '47', '12'), expectedValue);
+assert.strictEqual(formatDate(...dataInfo), expectedValue);
