@@ -31,8 +31,9 @@ const polarBear = {
   }
 };
 
-const animalDescription = (animal) => {
-  return `${animal.commonName} (${animal.name}) weighs around ${animal.weightRange.min}-${animal.weightRange.max} ${animal.weightRange.measurementUnit}`;
+const animalDescription = ({name, commonName, weightRange}) => {
+  const {min, max, measurementUnit} = weightRange; 
+  return `${commonName} (${name}) weighs around ${min}-${max} ${measurementUnit}`;
 }
 
 assert.strictEqual(
@@ -43,7 +44,7 @@ assert.strictEqual(
   animalDescription(blueWhale),
   'Blue whale (Balaenoptera musculus) weighs around 45-173 t'
 );
-// assert.strictEqual(
-//   animalDescription(polarBear),
-//   'Polar Bear (Ursus maritimus) weighs around 350-700 kg'
-// );
+assert.strictEqual(
+  animalDescription(polarBear),
+  'Polar Bear (Ursus maritimus) weighs around 350-700 kg'
+);
