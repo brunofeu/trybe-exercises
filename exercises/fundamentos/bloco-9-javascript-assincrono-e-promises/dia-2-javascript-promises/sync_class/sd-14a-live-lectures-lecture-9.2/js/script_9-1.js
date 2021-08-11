@@ -16,7 +16,7 @@ const translate = (word,laguage) => {
             const translateWord = englishWordFor(word);
             resolve(translateWord);
         }else{
-           reject('Language not found im my braisn, sorry :('); 
+           reject('Language not found im my brain, sorry :('); 
         }
     });
 }
