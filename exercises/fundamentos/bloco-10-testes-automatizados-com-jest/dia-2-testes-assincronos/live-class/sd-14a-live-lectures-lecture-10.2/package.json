@@ -1,0 +1,15 @@
+{
+  "name": "sd-14a-live-lectures-lecture-10.2",
+  "version": "1.0.0",
+  "description": "Este repositório armazena os códigos e scripts fornecidos durante as aulas ao vivo pelas pessoas especialistas da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
