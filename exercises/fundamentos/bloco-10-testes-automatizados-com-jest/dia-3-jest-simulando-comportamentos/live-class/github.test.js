@@ -47,4 +47,4 @@ describe('when calling getRepositoryInfoFromUserName function', () => {
 
   });
 
-})
+})  
