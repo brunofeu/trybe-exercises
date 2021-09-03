@@ -33,7 +33,7 @@ class Form extends Component {
         <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
         <form className='form'>
           <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange} />
-          <Sabor value={this.state.sabor} handleChange={this.handleChange}/>
+          <Sabor value={this.state.sabor} handleChange={this.handleChange} />
           <fieldset>
             <input
               name="idade"

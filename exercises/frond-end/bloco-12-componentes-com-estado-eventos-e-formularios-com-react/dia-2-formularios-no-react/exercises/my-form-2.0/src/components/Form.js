@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import NameForms from './NameForm';
+import EmailForms from './EmailForms';
+import CpfForms from './CpfForms';
+import EnderecoForms from './EnderecoForms';
+import CidadeForms from './CidadeForms';
+import EstadoForms from './EstadoForms';
+import TipoForms from './TipoForms';
 
 class Form extends Component {
   constructor() {
@@ -16,66 +23,26 @@ class Form extends Component {
   }
 
   handleEvent = (event) => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
     this.setState({
-      [name] : value
+      [name]: value
     })
   }
 
-
   render() {
-    const { name, email, cpf, endereco, cidade, estado, tipo} = this.state;
+    const { name, email, cpf, endereco, cidade, estado, tipo } = this.state;
 
     return (
       <div>
         <fieldset className="data-fieldset">
           <legend>Dados Pessoais</legend>
-          <label>
-            Nome:
-            <input 
-            name="name" 
-            type="text" 
-            required
-            value={name.toUpperCase()}
-            onChange={this.handleEvent}
-            maxLength={40}
-            />
-          </label>
-          <label>
-            Email:
-            <input 
-            name="email" 
-            type="email" 
-            required
-            value={email}
-            onChange={this.handleEvent}
-            />
-          </label>
-
-          <label>
-            CPF:
-            <input 
-            name="cpf" 
-            type="number" 
-            required
-            value={cpf}
-            onChange={this.handleEvent}
-            max={99999999999}
-            />
-          </label>
-
-          <label>
-            Endereço:
-            <input 
-            name="endereco" 
-            type="text" 
-            required
-            value={endereco}
-            onChange={this.handleEvent}
-            maxLength={200}
-            />
-          </label>
-
+          <NameForms value={name} handleEvent={this.handleEvent} />
+          <EmailForms value={email} handleEvent={this.handleEvent} />
+          <CpfForms value={cpf} handleEvent={this.handleEvent} />
+          <EnderecoForms value={endereco} handleEvent={this.handleEvent} />
+          <CidadeForms value={cidade} handleEvent={this.handleEvent} />
+          <EstadoForms value={estado} handleEvent={this.handleEvent}/>
+          <TipoForms value={tipo} handleEvent={this.handleEvent}/>
         </fieldset>
       </div>
     );
