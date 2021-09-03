@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import estados from './DataEstados';
 
 class EstadoForms extends Component {
   render() {
@@ -11,7 +12,11 @@ class EstadoForms extends Component {
           required
           value={value}
           onChange={handleEvent}
-        />
+        >
+          {
+            estados.map((estado) => <option>{estado.unidade_federativa}</option>)
+          }
+          </select>
       </label>
     );
   }
