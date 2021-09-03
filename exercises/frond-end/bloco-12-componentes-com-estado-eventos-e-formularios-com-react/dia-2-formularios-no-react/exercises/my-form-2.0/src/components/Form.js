@@ -6,6 +6,12 @@ class Form extends Component {
 
     this.state = {
       name: '',
+      email: '',
+      cpf: '',
+      endereco: '',
+      cidade: '',
+      estado: '',
+      tipo: 'casa'
     }
   }
 
@@ -18,17 +24,55 @@ class Form extends Component {
 
 
   render() {
+    const { name, email, cpf, endereco, cidade, estado, tipo} = this.state;
+
     return (
       <div>
-        <fieldset>
+        <fieldset className="data-fieldset">
+          <legend>Dados Pessoais</legend>
           <label>
             Nome:
             <input 
             name="name" 
             type="text" 
             required
-            value={this.state.name}
+            value={name.toUpperCase()}
             onChange={this.handleEvent}
+            maxLength={40}
+            />
+          </label>
+          <label>
+            Email:
+            <input 
+            name="email" 
+            type="email" 
+            required
+            value={email}
+            onChange={this.handleEvent}
+            />
+          </label>
+
+          <label>
+            CPF:
+            <input 
+            name="cpf" 
+            type="number" 
+            required
+            value={cpf}
+            onChange={this.handleEvent}
+            max={99999999999}
+            />
+          </label>
+
+          <label>
+            Endereço:
+            <input 
+            name="endereco" 
+            type="text" 
+            required
+            value={endereco}
+            onChange={this.handleEvent}
+            maxLength={200}
             />
           </label>
 
