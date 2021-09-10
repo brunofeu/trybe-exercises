@@ -9,17 +9,29 @@ class Cronometer extends Component {
   }
 
   componentDidMount() {
-    const ONE_SECOND = 1000;
-    setInterval(() => {
+    const ONE_SECOND = 300;
+    this.cronometerInterval = setInterval(() => {
       this.setState((prevState) => ({ seconds: prevState.seconds + 1}))
     }, ONE_SECOND);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const MAX_SECONDS = 30;
+    if ( prevState.seconds === MAX_SECONDS) {
+      this.resetSeconds()
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.cronometerInterval)
+  }
+
+  resetSeconds = () => {
+    this.setState({seconds: 0})
+  }
+
   render() {
     const { seconds } = this.state;
-
-    
-
     return (
       <h2>
         {seconds}
