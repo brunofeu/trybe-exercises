@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { Router } from 'react-router';
 import { MemoryRouter } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
+
 import App from '../App';
+import renderWithRouter from './util/renderWithRouter';
 
 it('Ao entrar na página verifica se o texto "Sobre mim"'
   + ' aparece e clica no link de projetos', () => {
@@ -61,17 +61,33 @@ it('Ao entrar na página verifica se o texto "Sobre mim"'
 });
 
 it('exibe a página "não encontrado" quando eu digitar endereço inválido', () => {
-  const customHistory = createMemoryHistory();
-  render(
-    <Router history={ customHistory }>
-      <App />
-    </Router>,
-  );
-  customHistory.push('/rota-que-nao-existe');
+  const { history } = renderWithRouter(<App />);
+
+  history.push('/rota-que-nao-existe');
 
   const notFoundText = screen.getByRole('heading', {
     level: 1,
     name: /página não encontrada/i,
   });
   expect(notFoundText).toBeInTheDocument();
+});
+
+it('ao entrar na página de comentários, verificar se é possivel add comentário', () => {
+  const { history } = renderWithRouter(<App />);
+  history.push('/comments');
+
+  const commentsText = screen.getByRole('heading', {
+    level: 1,
+    name: /comente/i,
+  });
+  expect(commentsText).toBeInTheDocument();
+  const commentInput = screen.getByRole('textbox');
+  const buttonAddComment = screen.getByRole('button', {
+    name: /add comment/i,
+  });
+  userEvent.type(commentInput, 'xablau');
+  userEvent.click(buttonAddComment);
+
+  const xablauText = screen.getByText(/xablau/i);
+  expect(xablauText).toBeInTheDocument();
 });
