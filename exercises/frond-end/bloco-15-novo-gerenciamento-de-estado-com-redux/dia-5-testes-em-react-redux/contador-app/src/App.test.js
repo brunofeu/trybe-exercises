@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import App from './App';
 
 import { createStore, combineReducers } from 'redux';
@@ -26,10 +26,18 @@ describe('testing clicks', () => {
     expect(buttonAdicionar).toBeInTheDocument();
     expect(queryByText('0')).toBeInTheDocument();
   });
-  test('a click in a button should increment the value of clicks', () => {
+  test('the page return initial state value', () => {
     const { queryByText } = renderWithRedux(<App />, { initialState: { clickReducer: { counter: 5 }}});
   
     expect(queryByText('5')).toBeInTheDocument();
+  });
+  test('a click in a button should increment the value of clicks', () => {
+    const { queryByText } = renderWithRedux(<App />);
+    const buttonAdicionar = queryByText('Clique aqui');
+    fireEvent.click(buttonAdicionar);
+    expect(queryByText('1')).toBeInTheDocument();
+    fireEvent.click(buttonAdicionar);
+    expect(queryByText('2')).toBeInTheDocument();
   });
 });
 
