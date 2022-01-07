@@ -1,4 +1,6 @@
-const peso = 90;
-const altura = 182;
+const readline = require('readline-sync')
 
-console.log(peso/(altura/100)^2)
+const peso = readline.questionFloat('Qual o seu peso em kg? ');
+const altura = readline.questionFloat('Qual a sua altura em cm? ');
+
+console.log(`seu IMC é de: ${peso/((altura/100)**2)}`);

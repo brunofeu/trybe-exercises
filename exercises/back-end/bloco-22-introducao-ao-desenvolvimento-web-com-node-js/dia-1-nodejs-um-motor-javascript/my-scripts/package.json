@@ -8,5 +8,8 @@
     "imc": "node index.js"
   },
   "author": "Bruno Feu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
