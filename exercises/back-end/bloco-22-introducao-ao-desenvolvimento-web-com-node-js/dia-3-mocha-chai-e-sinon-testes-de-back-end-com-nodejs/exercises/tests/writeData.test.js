@@ -5,10 +5,11 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 
 describe('Executa a função "writeData"', () => {
-  describe('a reposta', async () => {
 
-    before(() => { sinon.stub(fs, 'writeFile').returns('ok') })
-    after(() => { fs.writeFile.restore()})
+  before(() => { sinon.stub(fs, 'writeFile').returns('ok') })
+  after(() => { fs.writeFile.restore()})
+  
+  describe('a reposta', async () => {
 
     const resposta = await writeData('arquivo.txt', 'lorem ipsum')
 
@@ -20,5 +21,4 @@ describe('Executa a função "writeData"', () => {
       expect(resposta).to.be.equals('ok')
     })
   })
-
 })
