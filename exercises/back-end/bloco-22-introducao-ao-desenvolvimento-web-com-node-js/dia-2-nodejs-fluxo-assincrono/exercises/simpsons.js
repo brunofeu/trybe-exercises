@@ -35,7 +35,6 @@ const removeIds = async (id) => {
 
   fs.writeFile('simpsons.json', JSON.stringify(removeSimpson), 'utf8')
 
-  // console.log(removeSimpson)
 }
 
 removeIds(['10', '6']);
