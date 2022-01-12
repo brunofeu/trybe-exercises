@@ -24,6 +24,18 @@ app.get('/recipes', (req, res) => {
   res.json(recipes);
 });
 
+//---------Query String----------//
+
+app.get('/recipes/search', (req, res) => {
+  const { name, maxPrice, minPrice } = req.query;
+  const filteredRecipes = recipes.filter((r) => r.name.includes(name) 
+    && r.price < parseInt(maxPrice)
+    && r.price > parseInt(minPrice));
+  res.status(200).json(filteredRecipes);
+})
+
+//---------Query String----------//
+
 app.get('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipe = recipes.find((r) => r.id === parseInt(id));
@@ -37,6 +49,16 @@ app.get('/drinks', (req, res) => {
   res.send(drinks)
 })
 
+//---------Query String----------//
+
+app.get('/drinks/search', (req, res) => {
+  const { name } = req.query;
+  const filteredDrinks = drinks.filter((d) => d.name.includes(name));
+  res.status(200).json(filteredDrinks);
+})
+
+//---------Query String----------//
+
 app.get('/drinks/:id', (req, res) => {
   const { id } = req.params;
   const drink = drinks.find((d) => d.id === parseInt(id))
@@ -45,3 +67,4 @@ app.get('/drinks/:id', (req, res) => {
 
   res.status(200).send(drink)
 })
+
