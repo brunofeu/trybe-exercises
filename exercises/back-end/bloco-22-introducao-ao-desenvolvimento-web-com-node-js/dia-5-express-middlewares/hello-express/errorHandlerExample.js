@@ -6,6 +6,7 @@
 const app = require('express')();
 const rescue = require('express-rescue');
 const fs = require('fs/promises');
+const errorMiddleware = require('./errorMiddleware');
 
 // app.get('/:fileName', async (req, res, next) => {
 //   try {
@@ -36,8 +37,9 @@ app.get(
 
   ]);
 
-app.use(function (err, req, res, next) {
-  res.status(500).json({ error: `Erro: ${err.message}` });
-});
+// app.use(function (err, req, res, next) {
+//   res.status(500).json({ error: `Erro: ${err.message}` });
+// });
 
+app.use(errorMiddleware);
 app.listen(3002);
