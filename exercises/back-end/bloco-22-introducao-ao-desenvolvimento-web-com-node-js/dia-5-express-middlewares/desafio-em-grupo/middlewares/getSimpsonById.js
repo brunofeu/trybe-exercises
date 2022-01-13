@@ -1,18 +1,10 @@
-const app = require('express')();
-
+// 5 - Desafio
 const simpsons = require('../simpsons.json');
 
-// 4 - Desafio
-
-app.get('/simpsons/:id', getSimpsonsByIdMiddleware)
-
-function getSimpsonsByIdMiddleware(req, res) {
-  const { id } = req.param;
-  const checkSimpsons = simpsons.find((simpson) => simpson.id === +id)
-  if (checkSimpsons) 
-  res.status(200).json(simpsons);
-}
-
-app.listen(3000, () => { console.log('Ouvindo na porta 3000')});
-
-module.exports = getSimpsonsByIdMiddleware;
+module.exports = (req, res) => {
+  const { id } = req.params;
+  const checkSimpson = simpsons.find((simpson) => simpson.id === +id)
+  if (!checkSimpson) return res.status(404).json({ message: 'Simpson not found!'})
+  
+  res.status(200).json(checkSimpson);
+};
