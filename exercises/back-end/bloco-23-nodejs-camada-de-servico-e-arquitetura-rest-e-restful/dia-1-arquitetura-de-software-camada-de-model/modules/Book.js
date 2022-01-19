@@ -23,7 +23,21 @@ const findById = async (id) => {
   return bookData.map(serialize);
 }
 
+const isValid = (title, authorId) => {
+  if (!title || title.length < 3) return false;
+  if (!authorId || typeof authorId !== 'number') return false
+
+  return true
+}
+
+const create = async (title, authorId) => connection.execute(
+  'INSERT INTO model_example.books (title, author_id) VALUES (?,?)',
+  [title, authorId]
+)
+
 module.exports = {
   getAll,
   findById,
+  isValid,
+  create,
 }

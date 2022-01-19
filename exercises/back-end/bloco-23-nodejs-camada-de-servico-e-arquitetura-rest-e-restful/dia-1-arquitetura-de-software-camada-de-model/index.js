@@ -1,9 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const Author = require('./modules/Author');
 const Book = require('./modules/Book');
 
 const app = express();
+app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
 
@@ -22,6 +24,17 @@ app.get('/authors/:id', async (req, res) => {
   res.status(200).json(author);
 })
 
+app.post('/authors', async (req, res) => {
+  const {first_name, middle_name, last_name} = req.body;
+
+  if (!Author.isValid(first_name, middle_name, last_name)) {
+    return res.status(400).json({'message':'dados inválidos'});
+  } 
+
+  await Author.create(first_name, middle_name, last_name)
+  return res.status(201).json({'message':'Autor criado com sucesso!'})
+})
+
 app.get('/books', async (_req, res) => {
   const book = await Book.getAll();
 
@@ -35,6 +48,15 @@ app.get('/books/:id', async (req, res) => {
   if(!book) return res.status(404).json({'message': 'not found'});
 
   res.status(200).json(book);
+})
+
+app.post('/books', async (req, res) => {
+  const { title, author_id } = req.body;
+
+  if (!Book.isValid(title, author_id)) return res.status(400).json({ message: 'Dados inválidos' })
+
+  await Book.create(title, author_id) 
+    res.status(201).json({ message: 'Livro criado com sucesso! '});
 })
 
 
