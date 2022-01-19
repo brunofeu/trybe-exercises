@@ -1,4 +1,5 @@
 const connection = require('./connection');
+const Author = require('./Author')
 
 const serialize = (bookData) => ({
 id: bookData.id,
@@ -23,9 +24,9 @@ const findById = async (id) => {
   return bookData.map(serialize);
 }
 
-const isValid = (title, authorId) => {
+const isValid = async (title, authorId) => {
   if (!title || title.length < 3) return false;
-  if (!authorId || typeof authorId !== 'number') return false
+  if (!authorId || typeof authorId !== 'number' || !(await Author.findById(authorId))) return false
 
   return true
 }
