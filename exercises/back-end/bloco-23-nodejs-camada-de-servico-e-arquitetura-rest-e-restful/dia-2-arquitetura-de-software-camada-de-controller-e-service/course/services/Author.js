@@ -35,13 +35,45 @@ const getAll = async () => {
 const findById = async (id) => {
   const author = await Author.findById(id)
 
+  if (!author) {
+    return {
+      error: {
+        code: 'notFound',
+        message: `Não foi possível encontrar uma pessoa autora com o id ${id}`,
+      },
+    };
+  }
+
   return getNewAuthor(author)
 }
 
-const create = async (firstName, middleName, lastName) => {
-  const authorValid = isValid(firstName, middleName, lastName)
+// const create = async (firstName, middleName, lastName) => {
 
-  if(!authorValid) return false;
+//   const authorValid = isValid(firstName, middleName, lastName)
+
+//   if(!authorValid) return false;
+
+//   const {insertedId} = await Author.create(firstName, middleName, lastName)
+
+//   return getNewAuthor({
+//     id: insertedId, 
+//     firstName, 
+//     middleName, 
+//     lastName
+//   });
+// }
+
+const create = async (firstName, middleName, lastName) => {
+  const existingAuthor = await Author.findByName(firstName, middleName, lastName);
+
+  if (existingAuthor) {
+    return {
+      error: {
+        code: 'alreadyExists',
+        message: 'Uma pessoa autora já existe com esse nome completo',
+      },
+    };
+  }
 
   const {insertedId} = await Author.create(firstName, middleName, lastName)
 
@@ -51,6 +83,7 @@ const create = async (firstName, middleName, lastName) => {
     middleName, 
     lastName
   });
+
 }
 
 module.exports = {
