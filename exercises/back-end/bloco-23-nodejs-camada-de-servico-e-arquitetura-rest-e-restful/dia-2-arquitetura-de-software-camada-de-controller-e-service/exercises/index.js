@@ -1,28 +1,26 @@
 require('dotenv').config();
-const cepModel = require('./models/cepModel');
+
+const cepController = require('./controllers/cepController');
 
 const app = require('express')();
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.json())
 
-app.get('/ping', (req, res) => {
-  res.status(200).json({ "message": "pong!" })
+app.get('/cep/:cep', cepController.getCep)
+
+
+
+app.post('/cep', async (req, res) => {
+  const { cep, logradouro, bairro, localidade, uf } = req.body;
+  const checkData = isValid({ cep, logradouro, bairro, localidade, uf })
+
+  if (!checkData) res.status(400).json({ error: { "code": "invalidData", "message": "<mensagem do Joi>" } })
+
+  // console.log(checkData)
+  await cepModel.addCep({ cep, logradouro, bairro, localidade, uf })
+  res.status(201).json({ cep, logradouro, bairro, localidade, uf })
 })
-
-app.get('/cep/:cep', async (req, res) => {
-  const { cep } = req.params;
-  const regexCep = /\d{5}-?\d{3}/
-  
-  if (!regexCep.test(cep)) return res.status(400).json(  { error: { "code": "invalidData", "message": "CEP inválido" } })
-  
-  const cepData = await cepModel.getCep(cep)
-
-  if (!cepData) return res.status(400).json({ error: { "code": "notFound", "message": "CEP não encontrado" } })
-
-  
-    res.status(200).json(cepData)
-  })
 
 
 const PORT = process.env.PORT || 3000;
