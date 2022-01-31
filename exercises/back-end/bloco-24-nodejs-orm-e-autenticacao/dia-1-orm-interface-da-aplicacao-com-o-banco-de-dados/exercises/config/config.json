@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "feu",
+    "password": "trybe123",
+    "database": "aula_24_1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+
