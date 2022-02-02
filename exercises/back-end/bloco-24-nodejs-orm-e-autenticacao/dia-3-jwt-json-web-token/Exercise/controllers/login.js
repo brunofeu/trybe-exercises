@@ -1,17 +1,26 @@
 const jwt = require('jsonwebtoken');
+const Joi = require('joi');
 
-module.exports = (req, res) => {
+const { JWT_SECRET } = process.env;
+
+const validateBody = (body) => 
+  Joi.object({
+    username: Joi.string().min(5).alphanum().required(),
+    password: Joi.string().min(5).required(),
+  }).validate(body);
+
+module.exports = (req, res, next) => {
+  const { error } = validateBody(req.body);
+  if (error) return next(error);
+
   const { username, password } = req.body;
-  if (!username || username.length < 5) {
-    return res.status(400).json({ message: 'username invalido' });
+
+  const payload = { username, admin: false };
+
+  if (username === 'admin' && password === 's3nh4S3gur4???') {
+    payload.admin = true;
   }
-  if (!password || password.length < 5) {
-    return res.status(400).json({ message: 'username invalido' });
-  }
-  const token = jwt.sign(
-    { username, password },
-    'SEGREDO',
-    { algorithm: 'HS256', expiresIn: '1d' },
-    );
+
+  const token = jwt.sign(payload, JWT_SECRET, { algorithm: 'HS256', expiresIn: '1h' });
   res.status(200).json({ token });
 };
