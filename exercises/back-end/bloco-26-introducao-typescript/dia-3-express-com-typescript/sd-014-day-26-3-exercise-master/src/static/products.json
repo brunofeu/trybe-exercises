@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "nome": "string",
+    "nomeDaMarca": "string",
+    "preco": 10,
+    "dataDaFabricacao": "2022-01-01",
+    "dataDaValidade": "2022-06-01"
+  }
+]
