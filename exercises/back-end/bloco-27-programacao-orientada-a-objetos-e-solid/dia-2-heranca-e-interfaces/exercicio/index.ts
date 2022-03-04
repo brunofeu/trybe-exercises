@@ -27,6 +27,12 @@ class Person {
   }
 }
 
+// const p2 = new Person('Alberto', new Date('2020/01/25'))
+// console.log(p2)
+
+// p2.birthDate = new Date('2020/01/25')
+// console.log(p2.birthDate)
+
 class Student extends Person {
   private _enrollment: string;
   private _examsGrades: number[];
@@ -67,15 +73,34 @@ class Student extends Person {
   }
 }
 
-const p1 = new Student('Carlos', new Date('1980/01/25'))
-console.log(p1)
-p1.examsGrades = [10, 9, 10, 9]
-p1.worksGrades = [8,8]
+// const p1 = new Student('Carlos', new Date('1980/01/25'))
+// console.log(p1)
+// p1.examsGrades = [10, 9, 10, 9]
+// p1.worksGrades = [8,8]
 
-console.log(p1.sumNotes())
+// console.log(p1.sumNotes())
 
-// const p2 = new Person('Alberto', new Date('2020/01/25'))
-// console.log(p2)
+interface Employee {
+  registration: string;
+  salary: number;
+  admissionDate: Date;
 
-// p2.birthDate = new Date('2020/01/25')
-// console.log(p2.birthDate)
+  generateRegistration(): string;
+}
+
+// Para testar!
+
+// const testInterfaceEmployee: Employee = {
+//     registration: 'FNC1234567891011',
+//     salary: 1200.00,
+//     admissionDate: new Date(),
+//     generateRegistration(): string {
+//         const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+
+//         return `FNC${randomStr}`;
+//     }
+// }
+
+// console.log(testInterfaceEmployee);
+
+
