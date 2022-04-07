@@ -9,4 +9,9 @@ export default class TournamentDAO {
     const tournaments = await this.model.find()
     return tournaments;
   }
+  
+  public async getByYear(year: string): Promise<ITournament[]> {
+    const tournament = await this.model.find({ year })
+    return tournament;
+  }
 }

@@ -5,8 +5,12 @@ class TournamentService {
 
   public async getAll() {
     const tournaments = await this.tournamentDAO.getAll();
-    console.log('tournaments')
     return tournaments;
+  }
+
+  public async getByYear(year: string) {
+    const tournament = await this.tournamentDAO.getByYear(year);
+    return tournament;
   }
 }
 
