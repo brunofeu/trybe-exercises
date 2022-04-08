@@ -14,4 +14,10 @@ export default class TournamentDAO {
     const tournament = await this.model.find({ year })
     return tournament;
   }
+
+  public async create(year: string): Promise<ITournament[]> {
+    const tournament = await this.model.find({ year })
+    return tournament;
+  
+
 }
