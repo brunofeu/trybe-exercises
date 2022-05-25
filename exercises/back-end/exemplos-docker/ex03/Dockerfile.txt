@@ -1,0 +1,6 @@
+# FROM python:alpine3.15
+
+# COPY hello.py hello.py
+
+# Comando RUN  executa na build, deve ser CMD
+# RUN ["python", "hello.py"]

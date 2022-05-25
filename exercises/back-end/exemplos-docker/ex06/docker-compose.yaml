@@ -1,0 +1,15 @@
+version: "3.0"
+services:
+  web1:
+    build: .
+    ports:
+      - "8001:3000"
+  web2:
+    build:
+      context: .
+      dockerfile: Dockerfile2
+    ports:
+      - "8002:3000"
+
+# é possivel buidar 2 dockerfiles diferentes na mesma pasta
+# os services que estão dentro do docker-compose conseguem conversar entre si
